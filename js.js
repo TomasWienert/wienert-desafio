@@ -16,6 +16,11 @@ for (let i = entrada; i >= 0; i = i - 1) {
 
 let mesNacimiento = prompt("¿En que mes naciste? A continuación te vamos a dar un dato interesante (usa solo minúsculas)")
 
+while (mesNacimiento === "") {
+    alert("Este dato te puede cambiar la vida, ¿no te gustaría conocerlo?")
+    mesNacimiento = prompt("¿En que mes naciste? (usa solo minúsculas)")
+}
+
 while (mesNacimiento !== "") {
     switch (mesNacimiento) {
         case "enero":
@@ -58,15 +63,21 @@ while (mesNacimiento !== "") {
             alert("error de entrada")
             break;
     }
-    if (mesNacimiento !== "enero" && mesNacimiento !== "febrero" && mesNacimiento !== "marzo" && mesNacimiento !== "abril" && mesNacimiento !== "mayo" && mesNacimiento !== "junio" && mesNacimiento !== "julio" && mesNacimiento !== "agosto" && mesNacimiento !== "septiembre" && mesNacimiento !== "octubre" && mesNacimiento !== "noviembre" && mesNacimiento !== "diciembre") {
-        mesNacimiento = prompt("Ingrese nuevamente su mes de nacimiento")
-    } else {
+    if (mesNacimiento !== "enero" && mesNacimiento !== "febrero" && mesNacimiento !== "marzo" && mesNacimiento !== "abril" && mesNacimiento !== "mayo" && mesNacimiento !== "junio" && mesNacimiento !== "julio" && mesNacimiento !== "agosto" && mesNacimiento !== "septiembre" && mesNacimiento !== "octubre" && mesNacimiento !== "noviembre" && mesNacimiento !== "diciembre" && mesNacimiento === "") {
+        mesNacimiento = prompt("Ingrese nuevamente su mes de nacimiento");
+    } else{
         break;
     }
 }
 
 let nombre = prompt("¿Cuál es tu nombre?")
+
+while (nombre === "") {
+    alert("vamos, ingresa tu nombre")
+    nombre = prompt("¿Cuál es tu nombre?")
+}
 alert("Bienvenido al primer desafío del curso de JavaScript " + nombre + ", a continuación se le pedirá la clave de ingreso:")
+
 
 /* Luego de terminar la cuenta regresiva pido el codigo de ingreso a la pagina que es: Coder */
 
